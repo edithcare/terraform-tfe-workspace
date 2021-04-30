@@ -25,6 +25,7 @@ resource "tfe_workspace" "workspace" {
   terraform_version     = var.workspace_terraform_version
   working_directory     = var.workspace_working_directory
   trigger_prefixes      = var.workspace_trigger_prefixes
+  allow_destroy_plan    = var.workspace_allow_destroy_plan
 
   vcs_repo {
     branch             = var.workspace_vcs_branch

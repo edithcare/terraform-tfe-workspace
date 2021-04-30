@@ -48,6 +48,12 @@ variable "workspace_trigger_prefixes" {
   default     = []
 }
 
+variable "workspace_allow_destroy_plan" {
+  type        = bool
+  description = "(Optional) Whether destroy plans can be queued on the workspace."
+  default     = true
+}
+
 variable "workspace_vcs_identifier" {
   type        = string
   description = "(Required) A reference to your VCS repository in the format <organization>/<repository> where <organization> and <repository> refer to the organization and repository in your VCS provider."
